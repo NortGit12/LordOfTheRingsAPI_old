@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1F100B161D387C8C00D535CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B151D387C8C00D535CB /* AppDelegate.swift */; };
-		1F100B181D387C8C00D535CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B171D387C8C00D535CB /* ViewController.swift */; };
 		1F100B1B1D387C8C00D535CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F100B191D387C8C00D535CB /* Main.storyboard */; };
 		1F100B1D1D387C8C00D535CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F100B1C1D387C8C00D535CB /* Assets.xcassets */; };
 		1F100B201D387C8C00D535CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F100B1E1D387C8C00D535CB /* LaunchScreen.storyboard */; };
+		1F100B281D387CC200D535CB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B271D387CC200D535CB /* Character.swift */; };
+		1F100B2B1D387EBB00D535CB /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B2A1D387EBB00D535CB /* NetworkController.swift */; };
+		1F100B2E1D38817500D535CB /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B2D1D38817500D535CB /* CharacterController.swift */; };
+		1F100B301D3886A100D535CB /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B2F1D3886A100D535CB /* CharacterViewController.swift */; };
+		1F100B331D388FC000D535CB /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100B321D388FC000D535CB /* CharactersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F100B121D387C8C00D535CB /* LordOfTheRingsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LordOfTheRingsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F100B151D387C8C00D535CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F100B171D387C8C00D535CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F100B1A1D387C8C00D535CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F100B1C1D387C8C00D535CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F100B1F1D387C8C00D535CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F100B211D387C8C00D535CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F100B271D387CC200D535CB /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		1F100B2A1D387EBB00D535CB /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		1F100B2D1D38817500D535CB /* CharacterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
+		1F100B2F1D3886A100D535CB /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		1F100B321D388FC000D535CB /* CharactersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				1F100B151D387C8C00D535CB /* AppDelegate.swift */,
-				1F100B171D387C8C00D535CB /* ViewController.swift */,
-				1F100B191D387C8C00D535CB /* Main.storyboard */,
+				1F100B291D387EB000D535CB /* Model */,
+				1F100B2C1D387EC500D535CB /* ModelController */,
+				1F100B311D3886A800D535CB /* ViewController */,
 				1F100B1C1D387C8C00D535CB /* Assets.xcassets */,
-				1F100B1E1D387C8C00D535CB /* LaunchScreen.storyboard */,
 				1F100B211D387C8C00D535CB /* Info.plist */,
+				1F100B1E1D387C8C00D535CB /* LaunchScreen.storyboard */,
+				1F100B191D387C8C00D535CB /* Main.storyboard */,
 			);
 			path = LordOfTheRingsAPI;
+			sourceTree = "<group>";
+		};
+		1F100B291D387EB000D535CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F100B271D387CC200D535CB /* Character.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F100B2C1D387EC500D535CB /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				1F100B2A1D387EBB00D535CB /* NetworkController.swift */,
+				1F100B2D1D38817500D535CB /* CharacterController.swift */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		1F100B311D3886A800D535CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1F100B2F1D3886A100D535CB /* CharacterViewController.swift */,
+				1F100B321D388FC000D535CB /* CharactersTableViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F100B181D387C8C00D535CB /* ViewController.swift in Sources */,
 				1F100B161D387C8C00D535CB /* AppDelegate.swift in Sources */,
+				1F100B331D388FC000D535CB /* CharactersTableViewController.swift in Sources */,
+				1F100B301D3886A100D535CB /* CharacterViewController.swift in Sources */,
+				1F100B2E1D38817500D535CB /* CharacterController.swift in Sources */,
+				1F100B281D387CC200D535CB /* Character.swift in Sources */,
+				1F100B2B1D387EBB00D535CB /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +328,7 @@
 				1F100B261D387C8C00D535CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
